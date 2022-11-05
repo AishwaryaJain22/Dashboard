@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './View/Login';
+import Customer from './View/Customer';
+import Order from './View/Order';
+import Aggrement from './View/Aggrement';
+import { Routes, Route } from "react-router-dom";
+import MaterialUI from './View/MaterialUI';
+import GoogleMap from './View/GoogleMap';
+import Practice from './View/Practice';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Routes>
+        <Route path="/" element={ <Login/> } />
+        <Route path="customer" element={ <Customer/> } />
+        <Route path="order" element={ <Order/> } />
+        <Route path="aggrement" element={ <Aggrement/> } />
+        <Route path="materialUI" element={ <MaterialUI/> } />
+        <Route path="googleMap" element={ <GoogleMap/> } />
+        <Route path="practice" element={<Practice/>}></Route>
+      </Routes>
     </div>
   );
 }
